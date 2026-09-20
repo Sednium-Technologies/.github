@@ -1,5 +1,10 @@
 # Sednium Technologies
 
+[![Website](https://img.shields.io/badge/website-sednium.com-111111?style=for-the-badge&labelColor=f4f4f4)](https://sednium.com)
+[![Location](https://img.shields.io/badge/based_in-West_Bengal,_India-111111?style=for-the-badge&labelColor=f4f4f4)](https://sednium.com)
+[![Repositories](https://img.shields.io/badge/repos-Sednium--Technologies-111111?style=for-the-badge&labelColor=f4f4f4)](https://github.com/Sednium-Technologies)
+[![Contact](https://img.shields.io/badge/contact-bhoid%40sednium.com-111111?style=for-the-badge&labelColor=f4f4f4)](mailto:bhoid@sednium.com)
+
 Sednium is a small software studio based in West Bengal, India. We build web applications, native Android
 apps, design systems, and the infrastructure underneath them. Most of what we make is on-device software:
 editors, launchers, chat clients, and AI tools that keep working without a network connection.
@@ -7,13 +12,15 @@ editors, launchers, chat clients, and AI tools that keep working without a netwo
 The people who write the code also run it in production and answer the bug reports, which keeps the feature
 list honest.
 
-- Website: https://sednium.com
-- Org repos: https://github.com/Sednium-Technologies
-- Contact: bhoid@sednium.com (product, commissions), loid@sednium.com (engineering)
-
 ## Products
 
 ### Krypton IDE
+
+[![v3.0](https://img.shields.io/badge/production-v3.0-EC5E27?style=flat)](https://github.com/Sednium-Technologies/krypton-ide/releases/latest)
+[![Platform](https://img.shields.io/badge/platform-Android_%2F_Web-555555?style=flat)](https://kryptonide.sednium.com)
+[![License](https://img.shields.io/badge/license-MIT-555555?style=flat)](https://github.com/Sednium-Technologies/krypton-ide/blob/main/LICENSE)
+[![Source](https://img.shields.io/badge/source-TypeScript_%2F_Java-555555?style=flat)](https://github.com/Sednium-Technologies/krypton-ide)
+[![Site](https://img.shields.io/badge/site-kryptonide.sednium.com-555555?style=flat)](https://kryptonide.sednium.com)
 
 A code editor and IDE for Android and the browser. The web stack runs locally through WebContainers, so
 HTML, JavaScript, React and Python projects execute without a server. Kotlin and Java are supported
@@ -23,12 +30,14 @@ Projects sync two ways with Google Drive, and Git commit/push/pull runs on isomo
 offline. Larry AI is the bundled agent: bring your own API key, and it plans against the whole project tree
 then applies small line-level edits instead of rewriting files.
 
-- Status: v3.0 is current. [Source (MIT)](https://github.com/Sednium-Technologies/krypton-ide) ·
-  [Releases](https://github.com/Sednium-Technologies/krypton-ide/releases/latest) ·
-  [kryptonide.sednium.com](https://kryptonide.sednium.com)
-- Stack: TypeScript, Java, Vite, Capacitor, Monaco
-
 ### Blade Launcher
+
+[![v2.4.7](https://img.shields.io/badge/production-v2.4.7-EC5E27?style=flat)](https://github.com/Sednium-Technologies/Blade-Launcher/releases/latest)
+[![Android](https://img.shields.io/badge/Android-8.0%2B_API_26-555555?style=flat)](https://github.com/Sednium-Technologies/Blade-Launcher)
+[![Java](https://img.shields.io/badge/OpenJDK-8_to_26-555555?style=flat)](https://blade-launcher.sednium.com/docs.html)
+[![License](https://img.shields.io/badge/license-GPL--3.0-555555?style=flat)](https://github.com/Sednium-Technologies/Blade-Launcher/blob/main/LICENSE)
+[![Source](https://img.shields.io/badge/source-Kotlin_%2F_Compose_M3-555555?style=flat)](https://github.com/Sednium-Technologies/Blade-Launcher)
+[![Site](https://img.shields.io/badge/site-blade--launcher.sednium.com-555555?style=flat)](https://blade-launcher.sednium.com)
 
 Runs Minecraft: Java Edition on Android, from 1.7.2 through 1.21.4 and current snapshots. Mod loaders
 supported are Fabric, Forge, NeoForge and Quilt, with modpack browsing for CurseForge and Modrinth inside
@@ -41,15 +50,15 @@ recommends a renderer (GL4ES 1.1.6, Vulkan Zink, or VirGL) rather than forcing o
 separate process from the UI, so a crash in the game does not take the launcher with it.
 
 Microsoft accounts work for Realms and public servers. Offline profiles work for LAN and singleplayer. Skins
-and capes are managed locally, including HD textures, with a 3D preview before applying.
-
-- Status: v2.4.7 is current, 292 MB, ARM64/ARMv7/x86/x86_64, Android 8.0+.
-  [Source (GPL-3.0)](https://github.com/Sednium-Technologies/Blade-Launcher) ·
-  [Docs](https://blade-launcher.sednium.com/docs.html) ·
-  [Site](https://blade-launcher.sednium.com)
-- Stack: Kotlin, Jetpack Compose (M3), C/C++ graphics translation layers
+and capes are managed locally, including HD textures, with a 3D preview before applying. The APK is 292 MB
+and covers ARM64, ARMv7, x86 and x86_64.
 
 ### ONYXCHAT
+
+[![December 2026](https://img.shields.io/badge/in_development-December_2026-EC5E27?style=flat)](https://onyxchat.sednium.com)
+[![Platform](https://img.shields.io/badge/platform-Android%2C_desktop_in_progress-555555?style=flat)](https://onyxchat.sednium.com)
+[![Cipher](https://img.shields.io/badge/E2EE-libsignal_%2B_ML--KEM--768-555555?style=flat)](https://sednium.com/onyxchat)
+[![Source](https://img.shields.io/badge/client-closed,_docs_public-555555?style=flat)](https://sednium.com/shield)
 
 An Android messenger with no phone number and no server-side message history. The relay forwards an
 encrypted payload over Firebase Cloud Messaging and stores nothing, so there is no message table to hand
@@ -69,10 +78,12 @@ The client is closed source. The architecture, including the six-part S.H.I.E.L.
 full at [sednium.com/onyxchat](https://sednium.com/onyxchat) and
 [sednium.com/shield](https://sednium.com/shield) so it can be reviewed without the code.
 
-- Status: releasing December 2026. Windows and Linux clients are in development.
-  [onyxchat.sednium.com](https://onyxchat.sednium.com)
-
 ### Rosette
+
+[![Live](https://img.shields.io/badge/production-live-EC5E27?style=flat)](https://rosette.sednium.com)
+[![Models](https://img.shields.io/badge/models_up_to_5-from_15_providers-555555?style=flat)](https://rosette.sednium.com)
+[![Keys](https://img.shields.io/badge/keys_client_side-Google_Drive_appData-555555?style=flat)](https://rosette.sednium.com)
+[![Site](https://img.shields.io/badge/site-rosette.sednium.com-555555?style=flat)](https://rosette.sednium.com)
 
 An OpenAI-compatible gateway for running several models at once. Up to five models from fifteen providers
 share one endpoint, and a request starts a cycle: a leader model is elected from live benchmark scores
@@ -89,9 +100,13 @@ Provider keys never touch a Sednium server. They are encrypted into a `rocky_vau
 Drive appData folder and decrypted client-side. From the vault you can mint scoped keys for your own apps
 that talk to the gateway.
 
-- Status: live at [rosette.sednium.com](https://rosette.sednium.com)
-
 ### Oorty
+
+[![Live](https://img.shields.io/badge/production-Android_%2F_Web-EC5E27?style=flat)](https://oorty.sednium.com)
+[![Engines](https://img.shields.io/badge/on_device-llama.cpp_%2B_LiteRT-555555?style=flat)](https://github.com/Sednium-Technologies/OORTY)
+[![License](https://img.shields.io/badge/license-MIT_per_README-555555?style=flat)](https://github.com/Sednium-Technologies/OORTY/blob/main/README.md)
+[![Source](https://img.shields.io/badge/source-Kotlin-555555?style=flat)](https://github.com/Sednium-Technologies/OORTY)
+[![Site](https://img.shields.io/badge/site-oorty.sednium.com-555555?style=flat)](https://oorty.sednium.com)
 
 An AI client that runs models on the phone. Inference goes through a native llama.cpp JNI binding for GGUF
 weights, with Google LiteRT as a second engine, so there is no Python runtime or Node daemon in the app and
@@ -108,11 +123,13 @@ side effects, and local SQLite queries. Cloud models (Gemini, Claude, OpenAI, Gr
 route through the same UI with your own keys. No telemetry, and airplane mode changes nothing except cloud
 availability.
 
-- Status: live for Android and web. [Source](https://github.com/Sednium-Technologies/OORTY) ·
-  [oorty.sednium.com](https://oorty.sednium.com)
-- Stack: Kotlin, Jetpack Compose, llama.cpp, LiteRT, MCP
-
 ### Sednicon
+
+[![Live](https://img.shields.io/badge/production-live-EC5E27?style=flat)](https://sednicon.sednium.com)
+[![Icons](https://img.shields.io/badge/icons-200%2C000%2B-555555?style=flat)](https://sednicon.sednium.com/library)
+[![Latency](https://img.shields.io/badge/latency-under_50ms-555555?style=flat)](https://sednicon.sednium.com/status)
+[![Cost](https://img.shields.io/badge/cost-free-555555?style=flat)](https://sednicon.sednium.com)
+[![Docs](https://img.shields.io/badge/docs-sednicon.sednium.com%2Fdocs-555555?style=flat)](https://sednicon.sednium.com/docs)
 
 A headless icon API. Any icon from 200,000+ (Material Symbols, Lucide, Simple Icons and thirteen other
 sets) comes back as SVG from a single URL: `https://sednicon.sednium.com/api/render?q=rocket&color=000000&size=64`.
@@ -124,6 +141,11 @@ Runs on Vercel Edge Functions, under 50ms, free, no rate limits for normal use.
 
 ### Sednium News
 
+[![Live](https://img.shields.io/badge/production-live-EC5E27?style=flat)](https://news.sednium.com)
+[![Channels](https://img.shields.io/badge/channels-10_+_yours-555555?style=flat)](https://news.sednium.com)
+[![Trackers](https://img.shields.io/badge/trackers-0-555555?style=flat)](https://news.sednium.com)
+[![Source](https://img.shields.io/badge/source-TypeScript_%2F_Vite-555555?style=flat)](https://github.com/CoderBhoid/Sednium-News)
+
 A reader for ten channels (Headlines, Technology, World, Business, Politics, Science, Health, Entertainment,
 Sports, India) plus your own RSS feeds. Article HTML is fetched, passed through Mozilla Readability and
 DOMPurify, and rendered with reading-time estimates and a progress bar. The audio reader uses the browser's
@@ -133,11 +155,12 @@ readers and launcher widgets.
 No accounts, no analytics, no ad scripts. Theme, typography, bookmarks and custom feeds live in
 localStorage. It is a PWA, so the shell and saved stories work offline.
 
-- [news.sednium.com](https://news.sednium.com) ·
-  [Source](https://github.com/CoderBhoid/Sednium-News)
-- Stack: TypeScript, Vite, Tailwind, Vercel serverless functions
-
 ### The `.ai` format
+
+[![Spec v3](https://img.shields.io/badge/open_spec-v3-EC5E27?style=flat)](https://ai.sednium.com)
+[![Runtimes](https://img.shields.io/badge/runtimes-Python_3.10%2B_%2F_C%2B%2B17-555555?style=flat)](https://github.com/CoderBhoid/ai-format)
+[![License](https://img.shields.io/badge/license-MIT-555555?style=flat)](https://github.com/CoderBhoid/ai-format/blob/main/LICENSE.md)
+[![Source](https://img.shields.io/badge/source-CoderBhoid%2Fai--format-555555?style=flat)](https://github.com/CoderBhoid/ai-format)
 
 An open file format for agent memory, which solves the practical problem of an agent that has to restart
 without re-reading forty thousand tokens of history.
@@ -152,10 +175,8 @@ encrypt-then-MAC, with a post-quantum layer on the key wrapping.
 
 Bindings exist for Python 3.10+ and C++17, including `save_active_context.py`, `recall_context.py` and
 `autonomous_optimizer.py`, plus direct hooks into vLLM `PagedAttention` blocks and `llama_state_get_data()`
-/ `llama_state_set_data()` in llama.cpp.
-
-- Spec: [ai.sednium.com](https://ai.sednium.com) ·
-  [Source (MIT)](https://github.com/CoderBhoid/ai-format)
+/ `llama_state_set_data()` in llama.cpp. The spec and integration guides are at
+[ai.sednium.com](https://ai.sednium.com).
 
 ## Distribution and privacy
 
@@ -211,6 +232,10 @@ treats gravity, time and energy as properties of information.
 ## Contact
 
 West Bengal, India, UTC+05:30. We answer within a day.
+
+[![Product](https://img.shields.io/badge/product_%2F_press-bhoid%40sednium.com-111111?style=flat&labelColor=f4f4f4)](mailto:bhoid@sednium.com)
+[![Engineering](https://img.shields.io/badge/engineering-loid%40sednium.com-111111?style=flat&labelColor=f4f4f4)](mailto:loid@sednium.com)
+[![Creative](https://img.shields.io/badge/creative-revealyt%40sednium.com-111111?style=flat&labelColor=f4f4f4)](mailto:revealyt@sednium.com)
 
 | | |
 | :-- | :-- |
