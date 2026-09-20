@@ -26,6 +26,7 @@ list honest.
 [![Built by Loid](https://img.shields.io/badge/built%20by-loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
 [![Website](https://img.shields.io/badge/website-kryptonide.sednium.com-EC5E27?style=flat-square&labelColor=111111)](https://kryptonide.sednium.com)
 [![License MIT](https://img.shields.io/badge/license-MIT-111111?style=flat-square)](https://github.com/Sednium-Technologies/krypton-ide/blob/main/LICENSE)
+[![Next v4.0](https://img.shields.io/badge/next-v4.0%2C%2031%20oct%202026-111111?style=flat-square)](#roadmap)
 
 A code editor and IDE for Android and the browser. The web stack runs locally through WebContainers, so
 HTML, JavaScript, React and Python projects execute without a server. Kotlin and Java are supported
@@ -34,6 +35,11 @@ natively. The editor is Monaco, with a command palette, go-to-line, find and rep
 Projects sync two ways with Google Drive, and Git commit/push/pull runs on isomorphic-git so it works
 offline. Larry AI is the bundled agent: bring your own API key, and it plans against the whole project tree
 then applies small line-level edits instead of rewriting files.
+
+v4.0 is scheduled for 31 October 2026 and ships on two channels: the native Kotlin and Jetpack Compose
+client, and the legacy web-runtime build (Monaco with Capacitor and WebContainers) that current projects
+are on. The legacy channel keeps receiving fixes after 4.0 so nobody has to rewrite a project to keep
+working.
 
 - Website: https://kryptonide.sednium.com
 - Source: [Sednium-Technologies/krypton-ide](https://github.com/Sednium-Technologies/krypton-ide) · MIT · [Releases](https://github.com/Sednium-Technologies/krypton-ide/releases/latest)
@@ -285,10 +291,100 @@ their personal accounts.
 Issues are open on all of them. If you want to contribute to something non-trivial, open an issue first so
 we can agree on scope before you spend time on it.
 
+## Research
+
+Work that is not a product: papers, protocol designs and measurements. Some of it ends up inside the apps
+above, some of it stays a document.
+
+### Dimensional Spark Theory
+
+[![Status active](https://img.shields.io/badge/status-research%20active-111111?style=flat-square)](https://github.com/CoderBhoid/Dimensional-Sparks-Theory)
+[![Built by Bhoid](https://img.shields.io/badge/built%20by-bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
+[![Papers](https://img.shields.io/badge/papers-v1%20%C2%B7%20v2%20%C2%B7%20v3-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/Dimensional-Sparks-Theory)
+[![License MIT](https://img.shields.io/badge/license-MIT-111111?style=flat-square)](https://github.com/CoderBhoid/Dimensional-Sparks-Theory/blob/main/LICENSE)
+
+A theoretical physics framework proposed by Ayush Pal, three revisions deep and public. It treats the universe
+as a recursive information processing system instead of a machine, and derives mass-side effects from
+information rather than taking them as fundamental: gravity as tension from compressed data, dark energy as
+repulsive pressure from information density, time as the local processing rate that slows under load, and
+`c` as the bandwidth ceiling of that processing.
+
+The repo carries a calculator that runs the theory instead of describing it. Mass is converted to bits with
+the Landauer equivalence (about 3.0e-38 kg per bit), a Spark gravitational constant of roughly 2.0e-48 is
+applied, and gravitational pull is balanced against quantum repulsion. On the Earth preset it returns
+9.81 m/s², which is the point the papers make: Newtonian gravity recoverable from information terms alone.
+This is independent research, not an accepted result, and it is published so the arithmetic can be checked.
+
+- Papers and engine: https://github.com/CoderBhoid/Dimensional-Sparks-Theory
+
+### S.H.I.E.L.D. and blind-relay messaging
+
+[![Status shipped in ONYXCHAT](https://img.shields.io/badge/status-designed%20%2B%20implementing-06B6D4?style=flat-square&labelColor=111111)](https://sednium.com/shield)
+[![Built by Loid](https://img.shields.io/badge/built%20by-loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
+[![Docs](https://img.shields.io/badge/docs-sednium.com%2Fshield-06B6D4?style=flat-square&labelColor=111111)](https://sednium.com/shield)
+[![Docs](https://img.shields.io/badge/docs-sednium.com%2Fonyxchat-06B6D4?style=flat-square&labelColor=111111)](https://sednium.com/onyxchat)
+
+The messaging work by Ankush Das, written up in full outside the app. S.H.I.E.L.D. is a six-layer
+zero-knowledge architecture aimed at three specific failures of normal chat servers: server-side retention,
+identity correlation, and metadata leakage.
+
+The pieces worth naming. Identity becomes a non-deterministic 8-character hex Routing ID, so there is no
+phone number field to scrape and no deterministic handle to correlate. Key agreement pairs X25519 with
+ML-KEM-768 through HKDF-SHA256, and the Double Ratchet underneath still does the per-message forward secrecy
+and post-compromise recovery. Transport is a relay that only moves ciphertext and persists nothing, with
+push treated as untrusted blind transport. Backups live in the user's own Drive appData folder, and the vault
+key moved from being derived from a Google account ID to being wrapped behind device-held post-quantum key
+material, which closed the gap where an account ID alone could reconstruct the key.
+
+- Protocol write-up: https://sednium.com/shield · [Architecture notes](https://sednium.com/onyxchat)
+- Builds and system notes: [loid.sednium.com](https://loid.sednium.com)
+
+### Agent context security and quantisation
+
+[![Status published](https://img.shields.io/badge/status-published-111111?style=flat-square)](https://github.com/CoderBhoid/ai-format/blob/main/research.md)
+[![Built by Bhoid](https://img.shields.io/badge/built%20by-bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
+
+`research.md` in the ai-format repo is the measurement behind the `.ai` spec. It argues that plain text
+context files cost a full forward pass to become usable state, and instead stores pre-computed model state:
+serialised activations and KV cache, quantised aggressively (FP16 down toward INT2 and INT4), with gist
+tokens or activation beacons collapsing long instruction templates into a handful of vectors. It then
+compares an unencrypted general format against a post-quantum keyed one and reports the decryption overhead
+as marginal next to ingestion latency, which is why encryption is not optional in the spec.
+
+The same repo holds `brute_force_audit.py` for attacking your own snapshots, plus `agentic-skill/SKILL.md`
+and `AGENTS.md` for wiring the format into an agent as a skill.
+
+- Research: https://github.com/CoderBhoid/ai-format/blob/main/research.md · [Source (MIT)](https://github.com/CoderBhoid/ai-format)
+
+### Mobile hardware ceilings
+
+Two studies, both driven by "will it run", that ended up as shipped features.
+
+On the GPU side, Blade Launcher's runtime and renderer matching comes from mapping which Android GPUs handle
+desktop OpenGL translation well: GL4ES 1.1.6 for stability on Adreno and Mali, Vulkan Zink where full
+Vulkan 1.2 is actually available, VirGL for virtualised setups, plus the Java version each Minecraft release
+mandates (8 and 11 for old versions, 17 for 1.17 to 1.20.4, 21 for 1.20.5 and newer). The launcher does this
+detection on device instead of shipping a fixed guess. Documented in the [Blade Launcher docs](https://blade-launcher.sednium.com/docs.html).
+
+On the memory side, Oorty's fit matrix measures decode speed, VRAM footprint and crash risk per quantisation
+against device RAM (4, 6, 8 and 12 GB classes) with a llama.cpp and LiteRT engine on the same phone, then
+refuses to load a model that will be killed. That is where the RAM watchdog came from.
+
+- Details: [Blade Launcher](https://blade-launcher.sednium.com) · [Oorty](https://oorty.sednium.com)
+
+### Browser graphics and offline execution
+
+Continuous experiments with WebGL, Three.js and canvas throughput in mobile browsers, plus the compile and
+run pipelines that let a full toolchain live on an Android device (Termux and Linux subsystem work, incremental
+parsing, PTY bridges). Krypton's offline execution and Sednicon's edge-rendered SVG work both come out of
+this, and the notes are filed against those repositories rather than published as papers.
+
+- Related: [krypton-ide](https://github.com/Sednium-Technologies/krypton-ide) · [SEDNICON](https://github.com/AnkushDas4/SEDNICON) · [CoderBhoid](https://github.com/CoderBhoid)
+
 ## Roadmap
 
 - ONYXCHAT public release, targeted December 2026, plus the Windows and Linux desktop clients.
-- Krypton IDE: more agentic editing, deeper Git workflows, more offline language toolchains.
+- Krypton IDE 4.0, launching 31 October 2026: the native client and the legacy web-runtime build, plus more agentic editing and deeper Git workflows.
 - Blade Launcher: newer snapshots and mod loader compatibility, controller and input improvements.
 - Rosette: more providers, finer RBAC policy controls, better benchmark data for elections.
 - Oorty: the v2.0 branch in the repository, covering voice mode and the current MCP framework.
@@ -302,9 +398,7 @@ we can agree on scope before you spend time on it.
 | Ayush Rudra | Creative direction, visual identity, motion |
 | Debraj Chandra | Testing and bug hunting |
 
-We also publish independent research outside the product line, including
-[Dimensional Spark Theory](https://github.com/CoderBhoid/Dimensional-Sparks-Theory), a physics paper that
-treats gravity, time and energy as properties of information.
+Independent research is listed under Research above.
 
 ## Contact
 
