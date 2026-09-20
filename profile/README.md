@@ -42,6 +42,7 @@ are on. The legacy channel keeps receiving fixes after 4.0 so nobody has to rewr
 working.
 
 - Website: https://kryptonide.sednium.com
+- Research: https://www.sednium.com/research/kryptonide
 - Source: [Sednium-Technologies/krypton-ide](https://github.com/Sednium-Technologies/krypton-ide) · MIT · [Releases](https://github.com/Sednium-Technologies/krypton-ide/releases/latest)
 - Stack: TypeScript, Java, Vite, Capacitor, Monaco
 
@@ -95,10 +96,12 @@ from SecureRandom. Chat history is encrypted with AES-256 on device and synced t
 of your own Google Drive.
 
 The client is closed source. The architecture, including the six-part S.H.I.E.L.D. design that Loid
-specified, is written up in full at [sednium.com/onyxchat](https://sednium.com/onyxchat) and
-[sednium.com/shield](https://sednium.com/shield) so it can be reviewed without the code.
+specified, is written up in full at [sednium.com/research/onyxchat](https://www.sednium.com/research/onyxchat)
+and [sednium.com/research/shield](https://www.sednium.com/research/shield) so it can be reviewed without the
+code.
 
 - Website: https://onyxchat.sednium.com
+- Research: https://www.sednium.com/research/onyxchat
 - Status: releasing December 2026. Windows and Linux clients are in development. Architecture notes are public.
 
 ### Rosette
@@ -124,6 +127,7 @@ Drive appData folder and decrypted client-side. From the vault you can mint scop
 that talk to the gateway.
 
 - Website: https://rosette.sednium.com
+- Research: https://www.sednium.com/research/rosette
 
 ### Oorty
 
@@ -191,7 +195,8 @@ No accounts, no analytics, no ad scripts. Theme, typography, bookmarks and custo
 localStorage. It is a PWA, so the shell and saved stories work offline.
 
 - Website: https://news.sednium.com
-- Source: https://github.com/CoderBhoid/Sednium-News
+- Research: https://www.sednium.com/research/sedniumnews
+- Source: [CoderBhoid/Sednium-News](https://github.com/CoderBhoid/Sednium-News)
 - Stack: TypeScript, Vite, Tailwind, Vercel serverless functions
 
 ### The `.ai` format
@@ -217,6 +222,7 @@ Bindings exist for Python 3.10+ and C++17, including `save_active_context.py`, `
 / `llama_state_set_data()` in llama.cpp.
 
 - Website: https://ai.sednium.com
+- Research: https://www.sednium.com/research/aif
 - Source: [CoderBhoid/ai-format](https://github.com/CoderBhoid/ai-format) · MIT
 
 ### Charon
@@ -234,6 +240,7 @@ assets flickering mid render.
 It is internal tooling and stays deliberately unpolished. The repo is public because the render setup is
 fiddly and anyone wiring Remotion to a Node server will hit the same problems.
 
+- Research: https://www.sednium.com/research/charon
 - Source: [Sednium-Technologies/charon](https://github.com/Sednium-Technologies/charon) · ISC per `package.json`, no LICENSE file in the repo yet
 - Stack: Node, Express, Remotion, Three.js, TypeScript, Google Generative AI SDK
 
@@ -285,7 +292,7 @@ their personal accounts.
 | [charon](https://github.com/Sednium-Technologies/charon) | Sednium | none yet | - | Internal video generation tool |
 | [ai-format](https://github.com/CoderBhoid/ai-format) | Bhoid | MIT | [ai.sednium.com](https://ai.sednium.com) | `.ai` format spec, SDKs, optimizer |
 | [Sednium-News](https://github.com/CoderBhoid/Sednium-News) | Bhoid | none yet | [news.sednium.com](https://news.sednium.com) | news.sednium.com |
-| [Minecraft-Mods-Updater](https://github.com/CoderBhoid/Minecraft-Mods-Updater) | Bhoid | none yet | - | Mod update utility used by Blade Launcher |
+| [Minecraft-Mods-Updater](https://github.com/CoderBhoid/Minecraft-Mods-Updater) | Bhoid | none yet | [mcmods.sednium.com](https://mcmods.sednium.com) | Python CLI for client and server modpack version sync |
 | [PokeTools](https://github.com/CoderBhoid/PokeTools) | Bhoid | MIT | - | Offline Pokémon companion app, Vanilla JS and Capacitor |
 
 Issues are open on all of them. If you want to contribute to something non-trivial, open an issue first so
@@ -293,93 +300,158 @@ we can agree on scope before you spend time on it.
 
 ## Research
 
-Work that is not a product: papers, protocol designs and measurements. Some of it ends up inside the apps
-above, some of it stays a document.
+The eight studies we keep current at [sednium.com/research](https://www.sednium.com/research). Product
+sections above describe shipped behaviour; these describe the design work underneath, and every one of them
+has its own page at `sednium.com/research/<name>`.
+
+### AIF Context Engine
+
+[![Spec v3](https://img.shields.io/badge/spec-v3-111111?style=flat-square)](https://www.sednium.com/research/aif)
+[![Built by Bhoid](https://img.shields.io/badge/built%20by-bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
+[![Research](https://img.shields.io/badge/research-sednium.com%2Fresearch%2Faif-EC5E27?style=flat-square&labelColor=111111)](https://www.sednium.com/research/aif)
+[![Source MIT](https://img.shields.io/badge/source-MIT-111111?style=flat-square)](https://github.com/CoderBhoid/ai-format)
+
+A compressed, non-human-readable neural context format with post-quantum cryptography and temporal memory
+decay. `research.md` in the repo is the reasoning behind it: text context files force a full forward pass
+before a model can use them, so the format stores pre-computed state instead, serialising activations and KV
+cache and quantising them hard, with gist tokens collapsing long instruction templates into a handful of
+vectors. General format versus post-quantum keyed format is measured there too, and the decryption overhead
+comes out marginal next to ingestion latency, which is why encryption is mandatory in the spec rather than a
+flag someone has to remember to turn on.
+
+- Research: https://www.sednium.com/research/aif · [Spec site](https://ai.sednium.com)
+- Source: [CoderBhoid/ai-format](https://github.com/CoderBhoid/ai-format) · MIT · includes `brute_force_audit.py` and an `agentic-skill/` package
+- Stack: Python, C++, WebAssembly, ML-KEM/Kyber
+
+### Rosette Gateway
+
+[![Status live](https://img.shields.io/badge/status-live-111111?style=flat-square)](https://www.sednium.com/research/rosette)
+[![Built by Bhoid](https://img.shields.io/badge/built%20by-bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
+[![Research](https://img.shields.io/badge/research-sednium.com%2Fresearch%2Frosette-EC5E27?style=flat-square&labelColor=111111)](https://www.sednium.com/research/rosette)
+
+A decentralised, zero-server multi-model API gateway. The research is in how the routing decisions get made:
+consensus leader election ranks models on live benchmark data (60% reasoning, 40% coding) instead of a static
+priority list, failover waterfalls handle provider limits and outages, and an RBAC sandbox inspects tool-call
+arguments before they reach a machine. Credential storage is part of the same study, since a gateway holding
+everyone's keys would be the best target in the system, so keys stay encrypted in your own Drive appData
+folder.
+
+- Research: https://www.sednium.com/research/rosette · [Gateway](https://rosette.sednium.com)
+- Stack: React, TypeScript, Tailwind CSS, OpenAI-compatible API, WebSockets
+
+### Krypton IDE
+
+[![Release v3.0](https://img.shields.io/badge/release-v3.0-111111?style=flat-square)](https://www.sednium.com/research/kryptonide)
+[![Built by Bhoid and Loid](https://img.shields.io/badge/built%20by-bhoid%20%2B%20loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
+[![Research](https://img.shields.io/badge/research-sednium.com%2Fresearch%2Fkryptonide-06B6D4?style=flat-square&labelColor=111111)](https://www.sednium.com/research/kryptonide)
+[![Source MIT](https://img.shields.io/badge/source-MIT-111111?style=flat-square)](https://github.com/Sednium-Technologies/krypton-ide)
+
+A native mobile and web development environment with offline WebContainer execution and AI coding
+integration. The research question was whether a phone can hold a real toolchain: a browser-based container
+runtime for Node-family projects, Kotlin and Java compiling on device, an incremental parser cheap enough to
+re-highlight on every keystroke, and a PTY bridge so a terminal is a real terminal. The agent side is the
+other half of the study, since an autonomous loop on mobile hardware has to edit line ranges instead of
+rewriting files or it spends its whole budget on tokens.
+
+- Research: https://www.sednium.com/research/kryptonide · [Website](https://kryptonide.sednium.com)
+- Source: [Sednium-Technologies/krypton-ide](https://github.com/Sednium-Technologies/krypton-ide) · MIT
+- Stack: React, Vite, WebContainers, TypeScript, Kotlin
+
+### ONYX Chat
+
+[![Release Dec 2026](https://img.shields.io/badge/release-december%202026-111111?style=flat-square)](https://www.sednium.com/research/onyxchat)
+[![Built by Loid](https://img.shields.io/badge/built%20by-loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
+[![Research](https://img.shields.io/badge/research-sednium.com%2Fresearch%2Fonyxchat-06B6D4?style=flat-square&labelColor=111111)](https://www.sednium.com/research/onyxchat)
+
+A minimal encrypted messaging client built for absolute privacy and real-time sync. The design work sits in
+three decisions. Identity is a non-deterministic 8-character hex Routing ID rather than a phone number, which
+removes contact scraping and gives nothing stable to correlate. The relay only moves ciphertext and persists
+nothing, with push transport treated as untrusted. Key agreement pairs X25519 with ML-KEM-768 through
+HKDF-SHA256 while the Double Ratchet underneath keeps per-message forward secrecy and post-compromise
+recovery.
+
+Backups got their own revision: the vault key used to be derived from the Google account ID, which meant an
+identifier alone was in the trust path. It is now wrapped behind device-held post-quantum key material and the
+encrypted archive sits in the appData folder of your own Drive.
+
+- Research: https://www.sednium.com/research/onyxchat · [Website](https://onyxchat.sednium.com)
+- Status: closed-source client, published architecture. Stack: TypeScript, Vite, CSS, WebSockets
+
+### Charon
+
+[![Status internal](https://img.shields.io/badge/status-internal%20tooling-111111?style=flat-square)](https://www.sednium.com/research/charon)
+[![Built by Sednium](https://img.shields.io/badge/built%20by-sednium-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies)
+[![Research](https://img.shields.io/badge/research-sednium.com%2Fresearch%2Fcharon-EC5E27?style=flat-square&labelColor=111111)](https://www.sednium.com/research/charon)
+[![Source](https://img.shields.io/badge/source-JavaScript-111111?style=flat-square)](https://github.com/Sednium-Technologies/charon)
+
+A programmatic video rendering engine: React components composed with Remotion, driven by code scripts
+instead of a timeline editor, with WebAssembly stacks in the pipeline for dynamic frame generation. The
+working version runs as a Node and Express service. A prompt either goes through Gemini when a key is set or
+falls back to `LocalAI.js`, a rules engine that uses `compromise` to route the text across ten named style
+templates, and the selected template renders through a Three.js scene to an MP4 in `out/`. Assets are cached
+under `public/` so backgrounds do not flicker mid render.
+
+- Research: https://www.sednium.com/research/charon
+- Source: [Sednium-Technologies/charon](https://github.com/Sednium-Technologies/charon) · ISC per `package.json`, no LICENSE file in the repo yet
+- Stack: React, Remotion, Three.js, WebAssembly, TypeScript
 
 ### Dimensional Spark Theory
 
-[![Status active](https://img.shields.io/badge/status-research%20active-111111?style=flat-square)](https://github.com/CoderBhoid/Dimensional-Sparks-Theory)
+[![Status active](https://img.shields.io/badge/status-research%20active-111111?style=flat-square)](https://www.sednium.com/research/dst)
 [![Built by Bhoid](https://img.shields.io/badge/built%20by-bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
-[![Papers](https://img.shields.io/badge/papers-v1%20%C2%B7%20v2%20%C2%B7%20v3-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/Dimensional-Sparks-Theory)
-[![License MIT](https://img.shields.io/badge/license-MIT-111111?style=flat-square)](https://github.com/CoderBhoid/Dimensional-Sparks-Theory/blob/main/LICENSE)
+[![Research](https://img.shields.io/badge/research-sednium.com%2Fresearch%2Fdst-EC5E27?style=flat-square&labelColor=111111)](https://www.sednium.com/research/dst)
+[![Source MIT](https://img.shields.io/badge/source-MIT-111111?style=flat-square)](https://github.com/CoderBhoid/Dimensional-Sparks-Theory)
 
-A theoretical physics framework proposed by Ayush Pal, three revisions deep and public. It treats the universe
-as a recursive information processing system instead of a machine, and derives mass-side effects from
-information rather than taking them as fundamental: gravity as tension from compressed data, dark energy as
-repulsive pressure from information density, time as the local processing rate that slows under load, and
-`c` as the bandwidth ceiling of that processing.
+A theoretical physics and cosmological model, three revisions deep, that redefines gravity, spacetime and
+quantum behaviour in terms of digital information processing. Under it, gravity is the tension produced by
+compressed information, dark energy is the repulsive pressure of information density, time is the local
+processing rate that slows under load, and `c` is the bandwidth ceiling of the system. It is written to
+remove the singularities that break standard models rather than to patch them.
 
-The repo carries a calculator that runs the theory instead of describing it. Mass is converted to bits with
-the Landauer equivalence (about 3.0e-38 kg per bit), a Spark gravitational constant of roughly 2.0e-48 is
-applied, and gravitational pull is balanced against quantum repulsion. On the Earth preset it returns
-9.81 m/s², which is the point the papers make: Newtonian gravity recoverable from information terms alone.
-This is independent research, not an accepted result, and it is published so the arithmetic can be checked.
+The repository ships the theory as a working calculator: mass is converted to bits with the Landauer
+equivalence (about 3.0e-38 kg per bit), a Spark gravitational constant near 2.0e-48 is applied, and pull is
+balanced against quantum repulsion. The Earth preset returns 9.81 m/s². This is independent research and not
+an accepted result; it is public so the arithmetic can be checked.
 
-- Papers and engine: https://github.com/CoderBhoid/Dimensional-Sparks-Theory
+- Research: https://www.sednium.com/research/dst · [Papers and engine](https://github.com/CoderBhoid/Dimensional-Sparks-Theory)
+- Stack: cosmology, information theory, physics. `DST.pdf`, `DSTv2.pdf`, `Dst_3.pdf`
 
-### S.H.I.E.L.D. and blind-relay messaging
+### Sednium News
 
-[![Status shipped in ONYXCHAT](https://img.shields.io/badge/status-designed%20%2B%20implementing-06B6D4?style=flat-square&labelColor=111111)](https://sednium.com/shield)
+[![Status live](https://img.shields.io/badge/status-live-111111?style=flat-square)](https://www.sednium.com/research/sedniumnews)
+[![Built by Bhoid](https://img.shields.io/badge/built%20by-bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
+[![Research](https://img.shields.io/badge/research-sednium.com%2Fresearch%2Fsedniumnews-EC5E27?style=flat-square&labelColor=111111)](https://www.sednium.com/research/sedniumnews)
+[![Source](https://img.shields.io/badge/source-TypeScript-111111?style=flat-square)](https://github.com/CoderBhoid/Sednium-News)
+
+A distraction-free news reader and PWA built on local readability parsers, with clean typography and the
+reader in control of their own information diet. The research here is mostly subtraction: what a reader
+needs before it becomes a feed platform. Ten channels plus your own RSS feeds, article bodies extracted
+through Readability and sanitised with DOMPurify, an audio path that runs entirely on the browser's speech
+engine, and outbound RSS 2.0 endpoints so the thing works with real feed readers instead of only with itself.
+
+State lives in localStorage, so there is no user database to secure and no account to leak. Nothing is
+instrumented.
+
+- Research: https://www.sednium.com/research/sedniumnews · [Website](https://news.sednium.com)
+- Source: [CoderBhoid/Sednium-News](https://github.com/CoderBhoid/Sednium-News)
+- Stack: PWA, RSS, TypeScript, Tailwind CSS, Vercel serverless
+
+### Shield Gateway
+
+[![Status internal](https://img.shields.io/badge/status-security%20perimeter-111111?style=flat-square)](https://www.sednium.com/research/shield)
 [![Built by Loid](https://img.shields.io/badge/built%20by-loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
-[![Docs](https://img.shields.io/badge/docs-sednium.com%2Fshield-06B6D4?style=flat-square&labelColor=111111)](https://sednium.com/shield)
-[![Docs](https://img.shields.io/badge/docs-sednium.com%2Fonyxchat-06B6D4?style=flat-square&labelColor=111111)](https://sednium.com/onyxchat)
+[![Research](https://img.shields.io/badge/research-sednium.com%2Fresearch%2Fshield-06B6D4?style=flat-square&labelColor=111111)](https://www.sednium.com/research/shield)
 
-The messaging work by Ankush Das, written up in full outside the app. S.H.I.E.L.D. is a six-layer
-zero-knowledge architecture aimed at three specific failures of normal chat servers: server-side retention,
-identity correlation, and metadata leakage.
+Zero-trust identity verification, an OAuth security boundary and a rate-limiting perimeter, written for the
+kind of infrastructure where the services behind it should not have to make authorisation decisions at all.
+Go, OAuth2 and Docker. It is the same threat model as the ONYXCHAT work at a different layer: trust nothing
+that arrives, verify at the edge, and keep no record that would be worth subpoenaing.
 
-The pieces worth naming. Identity becomes a non-deterministic 8-character hex Routing ID, so there is no
-phone number field to scrape and no deterministic handle to correlate. Key agreement pairs X25519 with
-ML-KEM-768 through HKDF-SHA256, and the Double Ratchet underneath still does the per-message forward secrecy
-and post-compromise recovery. Transport is a relay that only moves ciphertext and persists nothing, with
-push treated as untrusted blind transport. Backups live in the user's own Drive appData folder, and the vault
-key moved from being derived from a Google account ID to being wrapped behind device-held post-quantum key
-material, which closed the gap where an account ID alone could reconstruct the key.
+This page also carries the S.H.I.E.L.D. protocol layers referenced by ONYXCHAT, so the messaging crypto and
+the gateway perimeter are documented together.
 
-- Protocol write-up: https://sednium.com/shield · [Architecture notes](https://sednium.com/onyxchat)
-- Builds and system notes: [loid.sednium.com](https://loid.sednium.com)
-
-### Agent context security and quantisation
-
-[![Status published](https://img.shields.io/badge/status-published-111111?style=flat-square)](https://github.com/CoderBhoid/ai-format/blob/main/research.md)
-[![Built by Bhoid](https://img.shields.io/badge/built%20by-bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
-
-`research.md` in the ai-format repo is the measurement behind the `.ai` spec. It argues that plain text
-context files cost a full forward pass to become usable state, and instead stores pre-computed model state:
-serialised activations and KV cache, quantised aggressively (FP16 down toward INT2 and INT4), with gist
-tokens or activation beacons collapsing long instruction templates into a handful of vectors. It then
-compares an unencrypted general format against a post-quantum keyed one and reports the decryption overhead
-as marginal next to ingestion latency, which is why encryption is not optional in the spec.
-
-The same repo holds `brute_force_audit.py` for attacking your own snapshots, plus `agentic-skill/SKILL.md`
-and `AGENTS.md` for wiring the format into an agent as a skill.
-
-- Research: https://github.com/CoderBhoid/ai-format/blob/main/research.md · [Source (MIT)](https://github.com/CoderBhoid/ai-format)
-
-### Mobile hardware ceilings
-
-Two studies, both driven by "will it run", that ended up as shipped features.
-
-On the GPU side, Blade Launcher's runtime and renderer matching comes from mapping which Android GPUs handle
-desktop OpenGL translation well: GL4ES 1.1.6 for stability on Adreno and Mali, Vulkan Zink where full
-Vulkan 1.2 is actually available, VirGL for virtualised setups, plus the Java version each Minecraft release
-mandates (8 and 11 for old versions, 17 for 1.17 to 1.20.4, 21 for 1.20.5 and newer). The launcher does this
-detection on device instead of shipping a fixed guess. Documented in the [Blade Launcher docs](https://blade-launcher.sednium.com/docs.html).
-
-On the memory side, Oorty's fit matrix measures decode speed, VRAM footprint and crash risk per quantisation
-against device RAM (4, 6, 8 and 12 GB classes) with a llama.cpp and LiteRT engine on the same phone, then
-refuses to load a model that will be killed. That is where the RAM watchdog came from.
-
-- Details: [Blade Launcher](https://blade-launcher.sednium.com) · [Oorty](https://oorty.sednium.com)
-
-### Browser graphics and offline execution
-
-Continuous experiments with WebGL, Three.js and canvas throughput in mobile browsers, plus the compile and
-run pipelines that let a full toolchain live on an Android device (Termux and Linux subsystem work, incremental
-parsing, PTY bridges). Krypton's offline execution and Sednicon's edge-rendered SVG work both come out of
-this, and the notes are filed against those repositories rather than published as papers.
-
-- Related: [krypton-ide](https://github.com/Sednium-Technologies/krypton-ide) · [SEDNICON](https://github.com/AnkushDas4/SEDNICON) · [CoderBhoid](https://github.com/CoderBhoid)
+- Research: https://www.sednium.com/research/shield
+- Stack: Go, OAuth2, Docker, security middleware
 
 ## Roadmap
 
