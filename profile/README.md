@@ -13,10 +13,6 @@ editors, launchers, chat clients, and AI tools that keep working without a netwo
 The people who write the code also run it in production and answer the bug reports, which keeps the feature
 list honest.
 
-Badge colours on this page say who built what. Orange is Bhoid ([@CoderBhoid](https://github.com/CoderBhoid))
-and default Sednium work. Cyan is Loid ([@AnkushDas4](https://github.com/AnkushDas4), builds documented at
-[loid.sednium.com](https://loid.sednium.com)). Black is neutral information: versions, licenses, status.
-
 - Website: https://sednium.com
 - Org repos: https://github.com/Sednium-Technologies
 - Contact: support@sednium.com (support, bugs), bhoid@sednium.com (product, commissions), loid@sednium.com (engineering)
@@ -67,6 +63,9 @@ and capes are managed locally, including HD textures, with a 3D preview before a
 - Website: https://blade-launcher.sednium.com · [Docs](https://blade-launcher.sednium.com/docs.html)
 - Source: [Sednium-Technologies/Blade-Launcher](https://github.com/Sednium-Technologies/Blade-Launcher) · GPL-3.0 · APK is 292 MB for ARM64/ARMv7/x86/x86_64
 - Stack: Kotlin, Jetpack Compose (M3), C/C++ graphics translation layers
+
+Minecraft is a registered trademark of Mojang Synergies AB. Blade Launcher is not affiliated with Mojang or
+Microsoft.
 
 ### ONYXCHAT
 
@@ -214,6 +213,45 @@ Bindings exist for Python 3.10+ and C++17, including `save_active_context.py`, `
 - Website: https://ai.sednium.com
 - Source: [CoderBhoid/ai-format](https://github.com/CoderBhoid/ai-format) · MIT
 
+### Charon
+
+[![Status internal](https://img.shields.io/badge/status-internal%20tooling-111111?style=flat-square)](https://github.com/Sednium-Technologies/charon)
+[![Built by Sednium](https://img.shields.io/badge/built%20by-sednium-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies)
+[![Source](https://img.shields.io/badge/source-JavaScript-111111?style=flat-square)](https://github.com/Sednium-Technologies/charon)
+
+The tool that makes our product videos. A Node and Express service drives Remotion: a prompt goes through
+Gemini when a key is configured, and falls back to a local rules engine (`LocalAI.js`) that uses `compromise`
+for semantic routing over named style templates. The chosen template renders through Remotion with a Three.js
+scene to an MP4 in `out/`. Static files are served from `public/`, and background caching is there to stop
+assets flickering mid render.
+
+It is the pipeline behind the Krypton and Blade Launcher demos. No UI promises: it is a working internal
+tool, published because the rendering setup is fiddly and someone else will hit the same problems.
+
+- Source: [Sednium-Technologies/charon](https://github.com/Sednium-Technologies/charon) · ISC per `package.json`, no LICENSE file in the repo yet
+- Stack: Node, Express, Remotion, Three.js, TypeScript, Google Generative AI SDK
+
+### PokeTools
+
+[![Release v1.0.0](https://img.shields.io/badge/release-v1.0.0-111111?style=flat-square)](https://github.com/CoderBhoid/PokeTools/releases)
+[![Built by Bhoid](https://img.shields.io/badge/built%20by-bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
+[![Platforms](https://img.shields.io/badge/platform-Android%20%7C%20iOS%20%7C%20web-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/PokeTools)
+[![License MIT](https://img.shields.io/badge/license-MIT-111111?style=flat-square)](https://github.com/CoderBhoid/PokeTools/blob/main/LICENSE)
+
+A Pokémon companion app built with plain HTML, CSS and JavaScript, wrapped for mobile with Capacitor. No
+framework, no bundler, and a 60fps target on the phone.
+
+Data comes from PokéAPI and is cached into IndexedDB on first sync, so the full Pokédex, moves, abilities and
+sprites stay available with no connection at all. The team builder works out shared weaknesses across your
+six picks and suggests counter types while you edit. There is a move analyzer with filters, branching
+evolution trees, an interactive type effectiveness matrix, and switchable sprite modes (official, pixel,
+animated). Fifteen themes, including OLED Dark and character-based palettes, with haptic feedback on
+interactions.
+
+- Source: [CoderBhoid/PokeTools](https://github.com/CoderBhoid/PokeTools) · MIT
+- Run it: open `index.html` or serve the folder statically; `npx capacitor run android` or `run ios` for native builds
+- Stack: Vanilla JS, Capacitor, IndexedDB, PokéAPI
+
 ## Distribution and privacy
 
 Our Android apps ship as signed APKs through GitHub Releases with published SHA-256 checksums. Play Store
@@ -243,7 +281,6 @@ their personal accounts.
 | [Sednium-News](https://github.com/CoderBhoid/Sednium-News) | Bhoid | none yet | [news.sednium.com](https://news.sednium.com) | news.sednium.com |
 | [Minecraft-Mods-Updater](https://github.com/CoderBhoid/Minecraft-Mods-Updater) | Bhoid | none yet | - | Mod update utility used by Blade Launcher |
 | [PokeTools](https://github.com/CoderBhoid/PokeTools) | Bhoid | MIT | - | Offline Pokémon companion app, Vanilla JS and Capacitor |
-| [Nothing-Calculator](https://github.com/AnkushDas4/Nothing-Calculator) | Loid | none yet | - | Calculator interface inspired by Nothing OS |
 
 Issues are open on all of them. If you want to contribute to something non-trivial, open an issue first so
 we can agree on scope before you spend time on it.
@@ -280,6 +317,3 @@ West Bengal, India, UTC+05:30. We answer within a day.
 | Engineering, protocol review, open source | [loid@sednium.com](mailto:loid@sednium.com) |
 | Creative work | [revealyt@sednium.com](mailto:revealyt@sednium.com) |
 | Security reports | [support@sednium.com](mailto:support@sednium.com), please email before opening a public issue |
-
-Minecraft is a registered trademark of Mojang Synergies AB. Blade Launcher is not affiliated with Mojang or
-Microsoft.
