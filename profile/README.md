@@ -238,12 +238,12 @@ their personal accounts.
 | [Blade-Launcher](https://github.com/Sednium-Technologies/Blade-Launcher) | Loid | GPL-3.0 | [blade-launcher.sednium.com](https://blade-launcher.sednium.com) | Launcher, runtime manager, renderer selection. READMEs in English, Simplified and Traditional Chinese |
 | [OORTY](https://github.com/Sednium-Technologies/OORTY) | Sednium | MIT (declared in README) | [oorty.sednium.com](https://oorty.sednium.com) | On-device inference client |
 | [SEDNICON](https://github.com/AnkushDas4/SEDNICON) | Loid | MIT (declared in README) | [sednicon.sednium.com](https://sednicon.sednium.com) | Headless icon and SVG generation API |
-| [charon](https://github.com/Sednium-Technologies/charon) | Sednium | none yet | — | Internal video generation tool |
+| [charon](https://github.com/Sednium-Technologies/charon) | Sednium | none yet | - | Internal video generation tool |
 | [ai-format](https://github.com/CoderBhoid/ai-format) | Bhoid | MIT | [ai.sednium.com](https://ai.sednium.com) | `.ai` format spec, SDKs, optimizer |
 | [Sednium-News](https://github.com/CoderBhoid/Sednium-News) | Bhoid | none yet | [news.sednium.com](https://news.sednium.com) | news.sednium.com |
-| [Minecraft-Mods-Updater](https://github.com/CoderBhoid/Minecraft-Mods-Updater) | Bhoid | none yet | — | Mod update utility used by Blade Launcher |
-| [PokeTools](https://github.com/CoderBhoid/PokeTools) | Bhoid | MIT | — | Offline Pokémon companion app, Vanilla JS and Capacitor |
-| [Nothing-Calculator](https://github.com/AnkushDas4/Nothing-Calculator) | Loid | none yet | — | Calculator interface inspired by Nothing OS |
+| [Minecraft-Mods-Updater](https://github.com/CoderBhoid/Minecraft-Mods-Updater) | Bhoid | none yet | - | Mod update utility used by Blade Launcher |
+| [PokeTools](https://github.com/CoderBhoid/PokeTools) | Bhoid | MIT | - | Offline Pokémon companion app, Vanilla JS and Capacitor |
+| [Nothing-Calculator](https://github.com/AnkushDas4/Nothing-Calculator) | Loid | none yet | - | Calculator interface inspired by Nothing OS |
 
 Issues are open on all of them. If you want to contribute to something non-trivial, open an issue first so
 we can agree on scope before you spend time on it.
