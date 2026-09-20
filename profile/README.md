@@ -225,8 +225,8 @@ for semantic routing over named style templates. The chosen template renders thr
 scene to an MP4 in `out/`. Static files are served from `public/`, and background caching is there to stop
 assets flickering mid render.
 
-It is the pipeline behind the Krypton and Blade Launcher demos. No UI promises: it is a working internal
-tool, published because the rendering setup is fiddly and someone else will hit the same problems.
+It is internal tooling and stays deliberately unpolished. The repo is public because the render setup is
+fiddly and anyone wiring Remotion to a Node server will hit the same problems.
 
 - Source: [Sednium-Technologies/charon](https://github.com/Sednium-Technologies/charon) · ISC per `package.json`, no LICENSE file in the repo yet
 - Stack: Node, Express, Remotion, Three.js, TypeScript, Google Generative AI SDK
@@ -245,7 +245,7 @@ Data comes from PokéAPI and is cached into IndexedDB on first sync, so the full
 sprites stay available with no connection at all. The team builder works out shared weaknesses across your
 six picks and suggests counter types while you edit. There is a move analyzer with filters, branching
 evolution trees, an interactive type effectiveness matrix, and switchable sprite modes (official, pixel,
-animated). Fifteen themes, including OLED Dark and character-based palettes, with haptic feedback on
+animated). Fifteen or more themes, including OLED Dark, Cyber Glass, Vaporwave and character-based palettes, with haptic feedback on
 interactions.
 
 - Source: [CoderBhoid/PokeTools](https://github.com/CoderBhoid/PokeTools) · MIT
