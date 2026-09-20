@@ -69,10 +69,44 @@ and capes are managed locally, including HD textures, with a 3D preview before a
 
 - Website: https://blade-launcher.sednium.com · [Docs](https://blade-launcher.sednium.com/docs.html)
 - Source: [Sednium-Technologies/Blade-Launcher](https://github.com/Sednium-Technologies/Blade-Launcher) · GPL-3.0 · APK is 292 MB for ARM64/ARMv7/x86/x86_64
+- Mod updates: [MC Mod Updater](https://mcmods.sednium.com) for batch checking and dependency resolution
 - Stack: Kotlin, Jetpack Compose (M3), C/C++ graphics translation layers
 
 Minecraft is a registered trademark of Mojang Synergies AB. Blade Launcher is not affiliated with Mojang or
 Microsoft.
+
+### MC Mod Updater
+
+[![Status live](https://img.shields.io/badge/status-live%20on%20web-111111?style=flat-square)](https://mcmods.sednium.com)
+[![Built by Bhoid](https://img.shields.io/badge/built%20by-bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
+[![Loaders](https://img.shields.io/badge/loaders-Fabric%20%C2%B7%20NeoForge%20%C2%B7%20Forge%20%C2%B7%20Quilt-EC5E27?style=flat-square&labelColor=111111)](https://mcmods.sednium.com)
+[![Website](https://img.shields.io/badge/website-mcmods.sednium.com-EC5E27?style=flat-square&labelColor=111111)](https://mcmods.sednium.com)
+[![Source](https://img.shields.io/badge/source-TypeScript-111111?style=flat-square)](https://github.com/CoderBhoid/Minecraft-Mods-Updater)
+
+A browser tool for keeping a modpack current. You drop in your `mods` folder or a pile of `.jar` files and it
+works out what is outdated across Modrinth and CurseForge, what companion libraries are missing, and hands
+back one batch download. Nothing gets uploaded. Hashes are computed on your machine through the Web
+Cryptography API in a worker, and folder sync uses the File System Access API, so in Chrome it writes results
+straight back into `.minecraft/mods`.
+
+Identification has two passes. A SHA-1 comparison against the Modrinth API and CurseForge is exact when the
+JAR is a stock download. When a file was renamed or built by hand, a semantic pass cleans the name
+(`fabric-sodium-mc1.20.1-0.5.8.jar` to `sodium`) and matches on project identity instead. Dependency checking
+runs against the whole pack rather than mod by mod, so Fabric API or Cloth Config that is already present does
+not show up as missing, and the one-click resolver only adds genuinely absent libraries to the queue. Alpha,
+beta and release channels are picked per run.
+
+Profiles make a pack reusable. Save, clone and switch between configurations, send a link like
+`https://mcmods.sednium.com/?profile=...` that loads that exact setup in someone else's session, import
+standard JSON manifests, or copy a formatted mod list for Discord, Markdown or plain text. An updated pack
+exports as a single zip bundle.
+
+It pairs with Blade Launcher, where the same loaders and version ranges matter, but it works standalone with
+any desktop setup.
+
+- Website: https://mcmods.sednium.com
+- Source: [CoderBhoid/Minecraft-Mods-Updater](https://github.com/CoderBhoid/Minecraft-Mods-Updater) · MIT declared in the README, no LICENSE file in the repo yet
+- Stack: TypeScript, React, Vite, Tailwind CSS, Vercel
 
 ### ONYXCHAT
 
@@ -292,7 +326,7 @@ their personal accounts.
 | [charon](https://github.com/Sednium-Technologies/charon) | Sednium | none yet | - | Internal video generation tool |
 | [ai-format](https://github.com/CoderBhoid/ai-format) | Bhoid | MIT | [ai.sednium.com](https://ai.sednium.com) | `.ai` format spec, SDKs, optimizer |
 | [Sednium-News](https://github.com/CoderBhoid/Sednium-News) | Bhoid | none yet | [news.sednium.com](https://news.sednium.com) | news.sednium.com |
-| [Minecraft-Mods-Updater](https://github.com/CoderBhoid/Minecraft-Mods-Updater) | Bhoid | none yet | [mcmods.sednium.com](https://mcmods.sednium.com) | Python CLI for client and server modpack version sync |
+| [Minecraft-Mods-Updater](https://github.com/CoderBhoid/Minecraft-Mods-Updater) | Bhoid | MIT (declared in README) | [mcmods.sednium.com](https://mcmods.sednium.com) | Browser mod updater and dependency resolver, pairs with Blade Launcher |
 | [PokeTools](https://github.com/CoderBhoid/PokeTools) | Bhoid | MIT | - | Offline Pokémon companion app, Vanilla JS and Capacitor |
 
 Issues are open on all of them. If you want to contribute to something non-trivial, open an issue first so
