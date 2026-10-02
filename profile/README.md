@@ -290,7 +290,13 @@ It is internal tooling and stays deliberately unpolished. The repo is public bec
 fiddly and anyone wiring Remotion to a Node server will hit the same problems.
 Research: https://www.sednium.com/research/charon
 Source: Sednium-Technologies/charon · ISC per package.json, no LICENSE file in the repo yet
+
+### Sednium Technologies
+
 Built on-device. Shipped in production. Supported by the people who wrote it.
-Website · GitHub · Research · Support · Commissions · Engineering
+Website · GitHub · Research
+Support · Commissions · Engineering
+
 Made in West Bengal, India · © 2026 Sednium Technologies. All rights reserved.
-Individual projects are licensed as stated in their repositories. Minecraft is a trademark of Mojang Synergies AB; Sednium Technologies is not affiliated with Mojang or Microsoft.
+Individual projects are licensed as stated in their repositories.
+Minecraft is a trademark of Mojang Synergies AB. Sednium Technologies is not affiliated with Mojang or Microsoft.
