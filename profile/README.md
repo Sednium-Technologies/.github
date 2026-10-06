@@ -19,7 +19,7 @@ We build Android apps, web apps, design systems and the infrastructure beneath t
 | --- | --- | --- |
 | Ayush Pal | Bhoid | CEO |
 | Ankush Das | Loid | CTO |
-| Ayush Rudra | RevealYT | CDO |
+| Ayush Rudra | Rudra | CDO |
 | Debraj Chandra | Chandra | CFO and Tester |
 
 ## Roadmap
@@ -39,6 +39,7 @@ We build Android apps, web apps, design systems and the infrastructure beneath t
 [![Version: v3.0](https://img.shields.io/badge/Version-v3.0-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/krypton-ide)
 [![Updated](https://img.shields.io/github/last-commit/Sednium-Technologies/krypton-ide?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/Sednium-Technologies/krypton-ide/commits)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111111?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/krypton-ide/blob/main/LICENSE)
+[![Tracks: Native + Legacy](https://img.shields.io/badge/Tracks-Native%20%2B%20Legacy-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/krypton-ide/releases)
 [![Platform: Android and Web](https://img.shields.io/badge/Platform-Android%20and%20Web-EC5E27?style=flat-square&labelColor=111111&logo=android&logoColor=white)](https://kryptonide.sednium.com)
 [![Website: kryptonide.sednium.com](https://img.shields.io/badge/Website-kryptonide.sednium.com-EC5E27?style=flat-square&labelColor=111111)](https://kryptonide.sednium.com)
 [![Built by: Bhoid](https://img.shields.io/badge/Built%20by-Bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
@@ -46,7 +47,14 @@ We build Android apps, web apps, design systems and the infrastructure beneath t
 
 **Code editor and IDE for Android and the browser.**
 
-Run HTML, JS, React and Python projects locally with no server, plus native Kotlin and Java. Version 4.0 brings a native Kotlin and Compose client on 31 Oct 2026, and the web-runtime build keeps receiving fixes.
+Run HTML, JS, React and Python projects locally with no server, plus native Kotlin and Java.
+
+**Dual track**
+
+| Track | Stack | Status |
+| --- | --- | --- |
+| Native | Kotlin and Jetpack Compose | v4.0 on 31 Oct 2026 |
+| Legacy | Monaco, Capacitor and WebContainers | v3.0, keeps receiving fixes after 4.0 |
 
 Monaco · WebContainers · Offline Git · Google Drive sync · Larry AI (bring your own key)
 
@@ -59,6 +67,7 @@ Monaco · WebContainers · Offline Git · Google Drive sync · Larry AI (bring y
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-111111?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/Blade-Launcher/blob/main/LICENSE)
 [![Platform: Android 8.0+](https://img.shields.io/badge/Platform-Android%208.0%2B-06B6D4?style=flat-square&labelColor=111111&logo=android&logoColor=white)](https://blade-launcher.sednium.com)
 [![Website: blade-launcher.sednium.com](https://img.shields.io/badge/Website-blade--launcher.sednium.com-06B6D4?style=flat-square&labelColor=111111)](https://blade-launcher.sednium.com)
+[![Built by: Bhoid](https://img.shields.io/badge/Built%20by-Bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
 [![Built by: Loid](https://img.shields.io/badge/Built%20by-Loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
 
 **Minecraft: Java Edition on Android.**
@@ -94,6 +103,7 @@ Modrinth + CurseForge · Whole-pack dependency check · Shareable profiles · Zi
 [![Apps: Mobile and desktop, Dec 2026](https://img.shields.io/badge/Apps-Mobile%20and%20desktop,%20Dec%202026-06B6D4?style=flat-square&labelColor=111111)](https://onyxchat.sednium.com)
 [![Source: Closed](https://img.shields.io/badge/Source-Closed-111111?style=flat-square&labelColor=111111)](https://www.sednium.com/research/onyxchat)
 [![Encryption: ML-KEM-768 + Double Ratchet](https://img.shields.io/badge/Encryption-ML--KEM--768%20%2B%20Double%20Ratchet-06B6D4?style=flat-square&labelColor=111111)](https://www.sednium.com/research/onyxchat)
+[![Built by: Bhoid](https://img.shields.io/badge/Built%20by-Bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
 [![Built by: Loid](https://img.shields.io/badge/Built%20by-Loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
 
 **A private messenger with no phone number and no stored messages.**
@@ -127,6 +137,7 @@ Fifteen providers share one gateway. A leader model is elected from live benchma
 [![License: Apache 2.0 / MIT](https://img.shields.io/badge/License-Apache%202.0%20/%20MIT-111111?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/OORTY)
 [![Platform: Desktop and Android](https://img.shields.io/badge/Platform-Desktop%20and%20Android-EC5E27?style=flat-square&labelColor=111111&logo=android&logoColor=white)](https://oorty.sednium.com)
 [![Website: oorty.sednium.com](https://img.shields.io/badge/Website-oorty.sednium.com-EC5E27?style=flat-square&labelColor=111111)](https://oorty.sednium.com)
+[![Built by: Bhoid](https://img.shields.io/badge/Built%20by-Bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
 
 **A sovereign AI assistant for desktop and Android.**
 
@@ -213,6 +224,7 @@ Python 3.10+ · C++17 · vLLM PagedAttention · llama.cpp state hooks
 [![Type: Internal tool](https://img.shields.io/badge/Type-Internal%20tool-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/charon)
 [![Updated](https://img.shields.io/github/last-commit/Sednium-Technologies/charon?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/Sednium-Technologies/charon/commits)
 [![License: ISC](https://img.shields.io/badge/License-ISC-111111?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/charon/blob/main/LICENSE)
+[![Built by: Bhoid](https://img.shields.io/badge/Built%20by-Bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
 
 **The tool behind our product videos.**
 
