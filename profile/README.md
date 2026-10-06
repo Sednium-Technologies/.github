@@ -19,7 +19,7 @@ We build Android apps, web apps, design systems and the infrastructure beneath t
 | --- | --- | --- |
 | Ayush Pal | Bhoid | CEO |
 | Ankush Das | Loid | CTO |
-| Ayush Rudra | Rudra | CDO |
+| Ayush Rudra | RevealYT | CDO |
 | Debraj Chandra | Chandra | CFO and Tester |
 
 ## Roadmap
