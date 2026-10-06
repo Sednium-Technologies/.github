@@ -15,12 +15,12 @@ We build Android apps, web apps, design systems and the infrastructure beneath t
 
 ## Team
 
-| Name | Role |
-| --- | --- |
-| Ayush Pal | CEO |
-| Ankush Das | CTO |
-| Ayush Rudra | CDO |
-| Debraj Chandra | CFO and Tester |
+| Name | Alias | Role |
+| --- | --- | --- |
+| Ayush Pal | Bhoid | CEO |
+| Ankush Das | Loid | CTO |
+| Ayush Rudra | Rudra | CDO |
+| Debraj Chandra | Chandra | CFO and Tester |
 
 ## Roadmap
 
@@ -29,7 +29,7 @@ We build Android apps, web apps, design systems and the infrastructure beneath t
 | Live now | Kryptonide, Blade Launcher, MC Mod Updater, Rosette, Oorty, Sednicon, Sednium News, the .ai format and the OnyxChat website |
 | 31 Oct 2026 | **Kryptonide v4.0**: native Kotlin and Compose client. The web-runtime build keeps getting fixes |
 | Dec 2026 | **OnyxChat** mobile and desktop apps go live |
-| Future development | **HGLM** (Hybrid General Language Models), **Sednium OS** (Arch Linux based) and **Sednium Writer** |
+| Future development | **HGLM** (local-first hybrid models) and **Sednium OS** (Arch Linux based, with Arc, Sednium Office and our own gaming stack) |
 | Ongoing research | Post-quantum messaging, agent memory, multi-model orchestration, on-device inference |
 
 ## Products
@@ -227,17 +227,18 @@ Remotion · Three.js · Gemini · Local rules engine
 ### 🧬 HGLM (Hybrid General Language Models)
 
 [![Status: Future development](https://img.shields.io/badge/Status-Future%20development-111111?style=flat-square&labelColor=111111)](#roadmap)
+[![Priority: Local hosting](https://img.shields.io/badge/Priority-Local%20hosting-EC5E27?style=flat-square&labelColor=111111)](#roadmap)
 [![Built by: Sednium Technologies](https://img.shields.io/badge/Built%20by-Sednium%20Technologies-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies)
 
-**Small local models for speed and memory, one big model on call for heavy reasoning.**
+**Local-first hybrid models: small specialists plus a large reasoning model you host yourself.**
 
-HGLM pairs an on-device harness and persistent memory with specialist models, and reaches a large reasoning model over API only when needed. Local VRAM cost for the large model stays at zero.
+HGLM pairs an on-device harness and persistent memory with specialist models. Local hosting comes first. Heavy synthesis through DeepSeek or Qwen APIs stays an optional fallback.
 
 | Part | Role |
 | --- | --- |
 | Oorty | Mutable harness that can patch its own tools and runtime modules |
 | .ai format | Persistent tiered memory with multi-day state continuity |
-| LLM trunk | Heavy reasoning through DeepSeek or Qwen APIs, nothing hosted locally |
+| LLM trunk | Heavy reasoning, hosted locally first, with DeepSeek or Qwen APIs as an optional fallback |
 | CLMs | Contrastive Learning Models |
 | SDMs | Speculative Decoding Models: draft-and-verify with multi-token prediction for lower latency |
 | TLMs | Temporal Latent Models: small background models, details unpublished |
@@ -246,26 +247,21 @@ HGLM pairs an on-device harness and persistent memory with specialist models, an
 
 [![Status: Future development](https://img.shields.io/badge/Status-Future%20development-111111?style=flat-square&labelColor=111111)](#roadmap)
 [![Base: Arch Linux](https://img.shields.io/badge/Base-Arch%20Linux-EC5E27?style=flat-square&labelColor=111111&logo=archlinux&logoColor=white)](https://archlinux.org)
+[![Desktop: Hyprland](https://img.shields.io/badge/Desktop-Hyprland-EC5E27?style=flat-square&labelColor=111111)](https://hypr.land)
 [![Built by: Sednium Technologies](https://img.shields.io/badge/Built%20by-Sednium%20Technologies-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies)
 
-**An Arch Linux based operating system from Sednium Technologies.**
+**An Arch Linux based operating system built for gaming, work and AI.**
 
-In planning. Details will be announced here.
+In planning. What it will ship with:
 
-### ✍️ Sednium Writer
+| Part | What |
+| --- | --- |
+| Gaming | Our own Proton stream and our own game launcher |
+| Desktop | A better UI built on Hyprland |
+| Sednium Office | Our own office suite, starting with Sednium Writer, an offline-first word processor in Rust and Qt 6 (early development) |
+| Arc | The built-in AI assistant at the core of the OS, running on API calls or local models |
 
-[![Updated](https://img.shields.io/github/last-commit/AnkushDas4/Sednium-Office-Package?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/AnkushDas4/Sednium-Office-Package/commits)
-[![Status: In development](https://img.shields.io/badge/Status-In%20development-111111?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4/Sednium-Office-Package)
-[![Type: Desktop app](https://img.shields.io/badge/Type-Desktop%20app-EC5E27?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4/Sednium-Office-Package)
-[![Built by: Loid](https://img.shields.io/badge/Built%20by-Loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
-
-**An offline-first word processor.**
-
-Part of the Sednium Office Package, written in Rust with Qt 6 for performance, correctness and clean architecture. Currently in early development.
-
-Rust · Qt 6 · QML · Offline-first
-
-[Source](https://github.com/AnkushDas4/Sednium-Office-Package)
+[Sednium Office source](https://github.com/AnkushDas4/Sednium-Office-Package)
 
 ---
 
