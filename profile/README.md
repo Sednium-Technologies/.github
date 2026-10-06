@@ -29,16 +29,17 @@ We build Android apps, web apps, design systems and the infrastructure beneath t
 | Live now | Kryptonide, Blade Launcher, MC Mod Updater, Rosette, Oorty, Sednicon, Sednium News, the .ai format and the OnyxChat website |
 | 31 Oct 2026 | **Kryptonide v4.0**: native Kotlin and Compose client. The web-runtime build keeps getting fixes |
 | Dec 2026 | **OnyxChat** mobile and desktop apps go live |
-| Future development | **HGLM** (Hybrid General Language Models) and **Sednium OS** (Arch Linux based) |
+| Future development | **HGLM** (Hybrid General Language Models), **Sednium OS** (Arch Linux based) and **Sednium Writer** |
 | Ongoing research | Post-quantum messaging, agent memory, multi-model orchestration, on-device inference |
 
 ## Products
 
 ### 💻 Kryptonide
 
-[![Version](https://img.shields.io/github/v/release/Sednium-Technologies/krypton-ide?include_prereleases&display_name=tag&label=Version&style=flat-square&labelColor=111111&color=EC5E27&logo=github&logoColor=white)](https://github.com/Sednium-Technologies/krypton-ide/releases)
+[![Version: v3.0](https://img.shields.io/badge/Version-v3.0-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/krypton-ide)
 [![Updated](https://img.shields.io/github/last-commit/Sednium-Technologies/krypton-ide?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/Sednium-Technologies/krypton-ide/commits)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111111?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/krypton-ide/blob/main/LICENSE)
+[![Platform: Android and Web](https://img.shields.io/badge/Platform-Android%20and%20Web-EC5E27?style=flat-square&labelColor=111111&logo=android&logoColor=white)](https://kryptonide.sednium.com)
 [![Website: kryptonide.sednium.com](https://img.shields.io/badge/Website-kryptonide.sednium.com-EC5E27?style=flat-square&labelColor=111111)](https://kryptonide.sednium.com)
 [![Built by: Bhoid](https://img.shields.io/badge/Built%20by-Bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
 [![Built by: Loid](https://img.shields.io/badge/Built%20by-Loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
@@ -53,7 +54,7 @@ Monaco · WebContainers · Offline Git · Google Drive sync · Larry AI (bring y
 
 ### ⛏️ Blade Launcher
 
-[![Version](https://img.shields.io/github/v/release/Sednium-Technologies/Blade-Launcher?include_prereleases&display_name=tag&label=Version&style=flat-square&labelColor=111111&color=06B6D4&logo=github&logoColor=white)](https://github.com/Sednium-Technologies/Blade-Launcher/releases)
+[![Version: v2.4.7](https://img.shields.io/badge/Version-v2.4.7-06B6D4?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/Blade-Launcher)
 [![Updated](https://img.shields.io/github/last-commit/Sednium-Technologies/Blade-Launcher?label=Updated&style=flat-square&labelColor=111111&color=06B6D4)](https://github.com/Sednium-Technologies/Blade-Launcher/commits)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-111111?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/Blade-Launcher/blob/main/LICENSE)
 [![Platform: Android 8.0+](https://img.shields.io/badge/Platform-Android%208.0%2B-06B6D4?style=flat-square&labelColor=111111&logo=android&logoColor=white)](https://blade-launcher.sednium.com)
@@ -72,7 +73,8 @@ Modrinth + CurseForge · Microsoft and offline accounts · Skins with 3D preview
 
 ### 🧩 MC Mod Updater
 
-[![Version](https://img.shields.io/github/v/release/CoderBhoid/Minecraft-Mods-Updater?include_prereleases&display_name=tag&label=Version&style=flat-square&labelColor=111111&color=EC5E27&logo=github&logoColor=white)](https://github.com/CoderBhoid/Minecraft-Mods-Updater/releases)
+[![Type: Web app](https://img.shields.io/badge/Type-Web%20app-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/Minecraft-Mods-Updater)
+[![Status: Live](https://img.shields.io/badge/Status-Live-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/Minecraft-Mods-Updater)
 [![Updated](https://img.shields.io/github/last-commit/CoderBhoid/Minecraft-Mods-Updater?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/CoderBhoid/Minecraft-Mods-Updater/commits)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111111?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/Minecraft-Mods-Updater/blob/main/LICENSE)
 [![Website: mcmods.sednium.com](https://img.shields.io/badge/Website-mcmods.sednium.com-EC5E27?style=flat-square&labelColor=111111)](https://mcmods.sednium.com)
@@ -104,7 +106,8 @@ Double Ratchet · ML-KEM-768 · AES-256-GCM · Encrypted Google Drive backup
 
 ### 🌹 Rosette
 
-[![Version](https://img.shields.io/github/v/release/CoderBhoid/rosette-gateway?include_prereleases&display_name=tag&label=Version&style=flat-square&labelColor=111111&color=EC5E27&logo=github&logoColor=white)](https://github.com/CoderBhoid/rosette-gateway/releases)
+[![Type: Web gateway](https://img.shields.io/badge/Type-Web%20gateway-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/rosette-gateway)
+[![Status: Live](https://img.shields.io/badge/Status-Live-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/rosette-gateway)
 [![Updated](https://img.shields.io/github/last-commit/CoderBhoid/rosette-gateway?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/CoderBhoid/rosette-gateway/commits)
 [![Website: rosette.sednium.com](https://img.shields.io/badge/Website-rosette.sednium.com-EC5E27?style=flat-square&labelColor=111111)](https://rosette.sednium.com)
 [![Built by: Bhoid](https://img.shields.io/badge/Built%20by-Bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
@@ -119,7 +122,7 @@ Fifteen providers share one gateway. A leader model is elected from live benchma
 
 ### 🧠 Oorty
 
-[![Version](https://img.shields.io/github/v/release/Sednium-Technologies/OORTY?include_prereleases&display_name=tag&label=Version&style=flat-square&labelColor=111111&color=EC5E27&logo=github&logoColor=white)](https://github.com/Sednium-Technologies/OORTY/releases)
+[![Version: v3.14.3](https://img.shields.io/badge/Version-v3.14.3-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/OORTY)
 [![Updated](https://img.shields.io/github/last-commit/Sednium-Technologies/OORTY?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/Sednium-Technologies/OORTY/commits)
 [![License: Apache 2.0 / MIT](https://img.shields.io/badge/License-Apache%202.0%20/%20MIT-111111?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/OORTY)
 [![Platform: Desktop and Android](https://img.shields.io/badge/Platform-Desktop%20and%20Android-EC5E27?style=flat-square&labelColor=111111&logo=android&logoColor=white)](https://oorty.sednium.com)
@@ -135,7 +138,8 @@ llama.cpp · LiteRT · MCP tools · Markdown vault · Encrypted LAN sync
 
 ### 🎨 Sednicon
 
-[![Version](https://img.shields.io/github/v/release/AnkushDas4/SEDNICON?include_prereleases&display_name=tag&label=Version&style=flat-square&labelColor=111111&color=06B6D4&logo=github&logoColor=white)](https://github.com/AnkushDas4/SEDNICON/releases)
+[![Type: Web API](https://img.shields.io/badge/Type-Web%20API-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4/SEDNICON)
+[![Status: Operational](https://img.shields.io/badge/Status-Operational-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4/SEDNICON)
 [![Updated](https://img.shields.io/github/last-commit/AnkushDas4/SEDNICON?label=Updated&style=flat-square&labelColor=111111&color=06B6D4)](https://github.com/AnkushDas4/SEDNICON/commits)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111111?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4/SEDNICON/blob/main/LICENSE)
 [![Website: sednicon.sednium.com](https://img.shields.io/badge/Website-sednicon.sednium.com-06B6D4?style=flat-square&labelColor=111111)](https://sednicon.sednium.com)
@@ -155,7 +159,8 @@ Material Symbols · Lucide · Simple Icons · FontAwesome · 13 more sets
 
 ### 📰 Sednium News
 
-[![Version](https://img.shields.io/github/v/release/CoderBhoid/Sednium-News?include_prereleases&display_name=tag&label=Version&style=flat-square&labelColor=111111&color=EC5E27&logo=github&logoColor=white)](https://github.com/CoderBhoid/Sednium-News/releases)
+[![Type: Web app](https://img.shields.io/badge/Type-Web%20app-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/Sednium-News)
+[![Status: Live](https://img.shields.io/badge/Status-Live-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/Sednium-News)
 [![Updated](https://img.shields.io/github/last-commit/CoderBhoid/Sednium-News?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/CoderBhoid/Sednium-News/commits)
 [![Website: news.sednium.com](https://img.shields.io/badge/Website-news.sednium.com-EC5E27?style=flat-square&labelColor=111111)](https://news.sednium.com)
 [![Built by: Bhoid](https://img.shields.io/badge/Built%20by-Bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
@@ -168,9 +173,28 @@ Readability + DOMPurify · Audio reader · RSS 2.0 endpoints · Works offline
 
 [Website](https://news.sednium.com) · [Research](https://www.sednium.com/research/sedniumnews) · [Source](https://github.com/CoderBhoid/Sednium-News)
 
+### ⚡ PokeTools
+
+[![Version: v1.0.0](https://img.shields.io/badge/Version-v1.0.0-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/PokeTools)
+[![Updated](https://img.shields.io/github/last-commit/CoderBhoid/PokeTools?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/CoderBhoid/PokeTools/commits)
+[![License: MIT](https://img.shields.io/badge/License-MIT-111111?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/PokeTools/blob/main/LICENSE)
+[![Platform: iOS, Android and Web](https://img.shields.io/badge/Platform-iOS,%20Android%20and%20Web-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/PokeTools)
+[![Built by: Bhoid](https://img.shields.io/badge/Built%20by-Bhoid-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid)
+
+**An open-source Pokémon companion app.**
+
+Built with vanilla web tech and Capacitor for a native 60 fps feel. After one sync, the full Pokédex works 100% offline. The team builder finds shared weaknesses and suggests counter types.
+
+Glassmorphism UI · 15+ themes · Move analyzer · Evolution trees · Type matrix · PokéAPI
+
+[Source](https://github.com/CoderBhoid/PokeTools)
+
+<sub>Not affiliated with Nintendo, Game Freak or The Pokémon Company.</sub>
+
 ### 🗂️ The .ai format
 
-[![Version](https://img.shields.io/github/v/release/CoderBhoid/ai-format?include_prereleases&display_name=tag&label=Version&style=flat-square&labelColor=111111&color=EC5E27&logo=github&logoColor=white)](https://github.com/CoderBhoid/ai-format/releases)
+[![Type: File format](https://img.shields.io/badge/Type-File%20format-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/ai-format)
+[![Spec: v3](https://img.shields.io/badge/Spec-v3-EC5E27?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/ai-format)
 [![Updated](https://img.shields.io/github/last-commit/CoderBhoid/ai-format?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/CoderBhoid/ai-format/commits)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111111?style=flat-square&labelColor=111111)](https://github.com/CoderBhoid/ai-format/blob/main/LICENSE)
 [![Website: ai.sednium.com](https://img.shields.io/badge/Website-ai.sednium.com-EC5E27?style=flat-square&labelColor=111111)](https://ai.sednium.com)
@@ -186,7 +210,7 @@ Python 3.10+ · C++17 · vLLM PagedAttention · llama.cpp state hooks
 
 ### 🎬 Charon
 
-[![Version](https://img.shields.io/github/v/release/Sednium-Technologies/charon?include_prereleases&display_name=tag&label=Version&style=flat-square&labelColor=111111&color=EC5E27&logo=github&logoColor=white)](https://github.com/Sednium-Technologies/charon/releases)
+[![Type: Internal tool](https://img.shields.io/badge/Type-Internal%20tool-EC5E27?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/charon)
 [![Updated](https://img.shields.io/github/last-commit/Sednium-Technologies/charon?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/Sednium-Technologies/charon/commits)
 [![License: ISC](https://img.shields.io/badge/License-ISC-111111?style=flat-square&labelColor=111111)](https://github.com/Sednium-Technologies/charon/blob/main/LICENSE)
 
@@ -227,6 +251,21 @@ HGLM pairs an on-device harness and persistent memory with specialist models, an
 **An Arch Linux based operating system from Sednium Technologies.**
 
 In planning. Details will be announced here.
+
+### ✍️ Sednium Writer
+
+[![Updated](https://img.shields.io/github/last-commit/AnkushDas4/Sednium-Office-Package?label=Updated&style=flat-square&labelColor=111111&color=EC5E27)](https://github.com/AnkushDas4/Sednium-Office-Package/commits)
+[![Status: In development](https://img.shields.io/badge/Status-In%20development-111111?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4/Sednium-Office-Package)
+[![Type: Desktop app](https://img.shields.io/badge/Type-Desktop%20app-EC5E27?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4/Sednium-Office-Package)
+[![Built by: Loid](https://img.shields.io/badge/Built%20by-Loid-06B6D4?style=flat-square&labelColor=111111)](https://github.com/AnkushDas4)
+
+**An offline-first word processor.**
+
+Part of the Sednium Office Package, written in Rust with Qt 6 for performance, correctness and clean architecture. Currently in early development.
+
+Rust · Qt 6 · QML · Offline-first
+
+[Source](https://github.com/AnkushDas4/Sednium-Office-Package)
 
 ---
 
